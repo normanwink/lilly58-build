@@ -1,7 +1,7 @@
 <?php
 return [
     'BE' => [
-        'debug' => false,
+        'debug' => true,
         'explicitADmode' => 'explicitAllow',
         'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$dFdPcENEV1pJd1QyMUpOWg$YxoxBNSh8lYEZyqgIAlvC1WYa+hdgHjbNLWG1+UsA3o',
         'passwordHashing' => [
@@ -17,6 +17,7 @@ return [
                 'driver' => 'mysqli',
                 'host' => 'localhost',
                 'password' => 'root',
+                'port' => 3306,
                 'tableoptions' => [
                     'charset' => 'utf8mb4',
                     'collate' => 'utf8mb4_unicode_ci',
@@ -41,7 +42,7 @@ return [
         ],
     ],
     'FE' => [
-        'debug' => false,
+        'debug' => true,
         'disableNoCacheParameter' => true,
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -64,7 +65,7 @@ return [
                     'writerConfiguration' => [
                         'notice' => [
                             'TYPO3\CMS\Core\Log\Writer\FileWriter' => [
-                                'disabled' => true,
+                                'disabled' => false,
                             ],
                         ],
                     ],
@@ -112,10 +113,10 @@ return [
                 ],
             ],
         ],
-        'devIPmask' => '',
-        'displayErrors' => 0,
+        'devIPmask' => '*',
+        'displayErrors' => 1,
         'encryptionKey' => 'af866a66a49030362ee62f54d3c012934842e01d17c7be6c261840d5fbb566aef3570443fe80e31dcaeda89c99b4961c',
-        'exceptionalErrors' => 4096,
+        'exceptionalErrors' => 12290,
         'features' => [
             'unifiedPageTranslationHandling' => true,
             'yamlImportsFollowDeclarationOrder' => true,

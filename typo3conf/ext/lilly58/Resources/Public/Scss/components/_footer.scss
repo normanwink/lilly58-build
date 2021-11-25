@@ -1,0 +1,21 @@
+.footer {
+  background: $gray;
+  padding: 1em 0;
+  margin-top: $margin_l;
+}
+
+.footer-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+
+  a {
+    display: block;
+    padding: 0 1em;
+  }
+}
+
+@mixin footer-tablet {
+
+}

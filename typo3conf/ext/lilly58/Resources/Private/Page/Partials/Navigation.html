@@ -1,0 +1,19 @@
+<nav class="nav">
+  <div class="container">
+    <ul class="mainmenu">
+      <li>
+        <f:link.typolink parameter="1">
+          <f:translate key="lilly.home" extensionName="lilly58"/>
+        </f:link.typolink>
+      </li>
+
+      <f:for each="{mainmenu}" as="menuitem">
+        <li>
+          <f:link.typolink parameter="{menuitem.link}">
+            {menuitem.title}
+          </f:link.typolink>
+        </li>
+      </f:for>
+    </ul>
+  </div>
+</nav>

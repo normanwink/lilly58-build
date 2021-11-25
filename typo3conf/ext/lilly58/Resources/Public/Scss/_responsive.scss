@@ -1,0 +1,4 @@
+@media (max-width: $tablet) {
+  @include footer-tablet();
+  @include home-tablet();
+}

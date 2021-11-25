@@ -1,0 +1,25 @@
+{
+  "name": "lilly58-build",
+  "version": "1.0.0",
+  "description": "TYPO3 CMS =========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss-compile": "node-sass -rw typo3conf/ext/lilly58/Resources/Public/Scss -o typo3conf/ext/lilly58/Resources/Public/Css",
+    "watch": "sass typo3conf/ext/lilly58/Resources/Public/Scss/style.scss typo3conf/ext/lilly58/Resources/Public/Css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/normanwink/lilly58-build.git"
+  },
+  "author": "Norman Wink",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/normanwink/lilly58-build/issues"
+  },
+  "homepage": "https://github.com/normanwink/lilly58-build#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "scss-compile": "^0.1.7"
+  }
+}

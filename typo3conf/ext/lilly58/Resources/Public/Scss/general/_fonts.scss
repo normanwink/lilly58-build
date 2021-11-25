@@ -1,0 +1,28 @@
+$fonts: (
+  (
+    'Outfit',
+    'Outfit',
+    'Outfit-ExtraLight',
+    $light,
+    'normal'
+  ),
+  (
+    'Outfit',
+    'Outfit',
+    'Outfit-Regular',
+    $normal,
+    'normal'
+  ),
+);
+
+@each $name, $folder, $file, $weight, $style in $fonts {
+  @font-face {
+    $path: $font_root + $folder + '/' + $file;
+  	font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+  	// src: url($path + '.woff2') format('woff2'), url($path + '.woff') format('woff'), url($path + '.ttf') format('ttf');
+  	src: url($path + '.ttf') format('ttf');
+  	// text-rendering: optimizeLegibility;
+  }
+}
