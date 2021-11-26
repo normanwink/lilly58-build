@@ -1,0 +1,36 @@
+.hero-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-content {
+  padding: $margin_l 0;
+  position: relative;
+  z-index: 2;
+
+  h1 {
+    font-size: 5vw;
+    font-weight: $light;
+  }
+}
+
+@mixin hero-desktop {
+  .hero-content {
+    padding: 10vw 0;
+  }
+}
+
+@mixin hero-tablet {
+  .hero-content {
+    padding: $margin_s 0;
+  }
+}

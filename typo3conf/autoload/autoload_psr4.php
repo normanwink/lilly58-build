@@ -5,5 +5,5 @@
 $typo3InstallDir = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/';
 
 return array(
-    'Nwww\\Lilly58\\' => array($typo3InstallDir . 'typo3conf/ext/lilly58/Classes'),
+    'Nwww\\Mechkey\\' => array($typo3InstallDir . 'typo3conf/ext/mechkey/Classes'),
 );

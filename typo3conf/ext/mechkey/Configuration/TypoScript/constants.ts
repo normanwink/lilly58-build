@@ -1,0 +1,1 @@
+resources = EXT:mechkey/Resources

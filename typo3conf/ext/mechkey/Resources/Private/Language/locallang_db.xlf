@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2021-03-17T13:24:51Z" product-name="mechkey">
+		<header/>
+		<body>
+			<trans-unit id="layouts.home">
+				<source>Home</source>
+			</trans-unit>
+			<trans-unit id="layouts.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="ce.hero.title">
+				<source>Hero</source>
+			</trans-unit>
+			<trans-unit id="ce.hero.description">
+				<source>Large image with headline</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

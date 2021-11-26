@@ -92,8 +92,8 @@ return [
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
         ],
-        'lilly58' => [
-            'packagePath' => 'typo3conf/ext/lilly58/',
+        'mechkey' => [
+            'packagePath' => 'typo3conf/ext/mechkey/',
         ],
     ],
     'version' => 5,
