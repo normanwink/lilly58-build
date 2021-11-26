@@ -82,3 +82,20 @@ lib.contentElement {
 	partialRootPaths.5 = {$resources}/Private/Overrides/fluid_styled_content/Partials/
 	layoutRootPaths.5 = {$resources}/Private/Overrides/fluid_styled_content/Layouts/
 }
+
+tt_content {
+  hero =< lib.contentElement
+	hero {
+		templateName = Hero
+
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references {
+					fieldName = image
+				}
+				as = image
+			}
+		}
+	}
+}

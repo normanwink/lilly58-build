@@ -9,6 +9,12 @@
 			<trans-unit id="layouts.default">
 				<source>Default</source>
 			</trans-unit>
+			<trans-unit id="ce.hero.title">
+				<source>Hero</source>
+			</trans-unit>
+			<trans-unit id="ce.hero.description">
+				<source>Large image with headline</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

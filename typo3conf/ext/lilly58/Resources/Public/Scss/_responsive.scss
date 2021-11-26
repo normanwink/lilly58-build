@@ -1,4 +1,9 @@
+@media (max-width: $desktop) {
+  @include hero-desktop();
+}
+
 @media (max-width: $tablet) {
   @include footer-tablet();
   @include home-tablet();
+  @include hero-tablet();
 }

@@ -119,6 +119,25 @@ a:hover {
   left: 0px;
 }
 
+.subnav-wrap {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  background: #f2f2f2;
+  transition: opacity 300ms linear;
+}
+
+.subnav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .mainmenu {
   list-style: none;
   margin: 0;
@@ -130,6 +149,13 @@ a:hover {
 .mainmenu li a {
   display: block;
   padding: 1em;
+}
+.mainmenu li a.active {
+  font-weight: bold;
+}
+.mainmenu li:hover .subnav-wrap {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .footer {
@@ -175,10 +201,39 @@ a:hover {
   background: #FAFAFA;
 }
 
+.hero-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-content {
+  padding: 8em 0;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1280px) {
+  .hero-content {
+    padding: 10vw 0;
+  }
+}
 @media (max-width: 768px) {
   .home-item {
     flex: 100%;
     font-size: 2em;
+  }
+
+  .hero-content {
+    padding: 4em 0;
   }
 }
 

@@ -9,9 +9,28 @@
 
       <f:for each="{mainmenu}" as="menuitem">
         <li>
-          <f:link.typolink parameter="{menuitem.link}">
+          <f:link.typolink parameter="{menuitem.link}" class="{f:if(condition: '{menuitem.active}', then: 'active')}">
             {menuitem.title}
           </f:link.typolink>
+
+          <f:if condition="{menuitem.children}">
+            <f:then>
+              <div class="subnav-wrap">
+                <div class="container">
+                  <ul class="subnav">
+                    <f:for each="{menuitem.children}" as="child">
+                      <li>
+                        <f:link.typolink parameter="{child.link}" class="{f:if(condition: '{child.active}', then: 'active')}">
+                          {child.title}
+                        </f:link.typolink>
+                      </li>
+                    </f:for>
+                  </ul>
+                </div>
+              </div>
+            </f:then>
+          </f:if>
+
         </li>
       </f:for>
     </ul>

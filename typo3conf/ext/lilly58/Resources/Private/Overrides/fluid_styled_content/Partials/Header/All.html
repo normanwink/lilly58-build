@@ -1,8 +1,14 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:if condition="{data.header_layout} != 100">
   <f:if condition="{data.header} || {data.subheader} || {data.date}">
-    <div class="container">
-      <div class="column">
+
+    <f:if condition="{data.CType} != 'hero'">
+      <f:then>
+        <div class="container">
+          <div class="column">
+      </f:then>
+    </f:if>
+
         <header>
           <f:render partial="Header/Header" arguments="{
             header: data.header,
@@ -19,8 +25,13 @@
             date: data.date,
             positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}'}" />
         </header>
-      </div>
-    </div>
+
+    <f:if condition="{data.CType} != 'hero'">
+      <f:then>
+          </div>
+        </div>
+      </f:then>
+    </f:if>
   </f:if>
 </f:if>
 </html>

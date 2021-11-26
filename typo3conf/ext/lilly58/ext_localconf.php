@@ -1,10 +1,22 @@
 <?php
 
-// wizard
+// custom content elements
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
 	'mod {
 		wizards.newContentElement.wizardItems {
 			common {
+				elements {
+          hero {
+            iconIdentifier = content-image
+            title = LLL:EXT:lilly58/Resources/Private/Language/locallang_db.xlf:ce.hero.title
+            description = LLL:EXT:lilly58/Resources/Private/Language/locallang_db.xlf:ce.hero.description
+            tt_content_defValues {
+              CType = hero
+            }
+          }
+				}
+
+      	show := addToList(hero)
 			}
 		}
 	}'
