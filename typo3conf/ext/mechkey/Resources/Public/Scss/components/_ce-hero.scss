@@ -15,23 +15,21 @@
 .hero-content {
   position: relative;
   z-index: 2;
+}
 
-  .bodytext {
-    padding: 2rem;
-    background: $tertiary;
-    margin-top: 25vh;
-    margin-left: auto;
-    max-width: 50%;
-    transform: translateX(1rem);
-    box-sizing: border-box;
-  }
+.hero-text {
+  padding: 2rem;
+  background: $tertiary;
+  margin-top: 25vh;
+  margin-left: auto;
+  max-width: 50%;
+  transform: translateX(1rem);
+  box-sizing: border-box;
 }
 
 @mixin hero-desktop {
-  .hero-content {
-    .bodytext {
-      max-width: 66%;
-    }
+  .hero-text {
+    max-width: 66%;
   }
 }
 
@@ -41,12 +39,10 @@
     transform: none;
   }
 
-  .hero-content {
-    .bodytext {
-      transform: none;
-      padding: 1em;
-      margin-top: 0;
-      max-width: 100%;
-    }
+  .hero-text {
+    transform: none;
+    padding: 1em;
+    margin-top: 0;
+    max-width: 100%;
   }
 }

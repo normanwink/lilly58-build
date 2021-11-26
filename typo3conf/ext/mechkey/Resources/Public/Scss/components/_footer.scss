@@ -1,7 +1,6 @@
 .footer {
   background: $primary_dark;
   color: $tertiary;
-  padding: 1em 0;
   margin-top: $margin_l;
 }
 
@@ -15,6 +14,15 @@
     display: block;
     padding: 0 1em;
   }
+}
+
+.footer-upper {
+  padding: 1em 0;
+}
+
+.footer-lower {
+  padding: 1em 0;
+  background: darken($primary_dark, 3%);
 }
 
 @mixin footer-tablet {

@@ -1,7 +1,26 @@
 <div style="clear:both;height:1px;margin-top:-1px;"></div>
 <footer class=footer>
-	<div class="container">
-		<div class="footer-content">
+	<div class="footer-upper">
+		<div class="container">
+			<div class="column">
+				<f:if condition="{data.lastUpdated}">
+					<f:then>
+						<f:translate key="last_updated" extensionName="mechkey" />: <f:format.date format="{f:translate(key: 'default_date_format', extensionName: 'mechkey')} ">{data.lastUpdated}</f:format.date>
+					</f:then>
+					<f:else>
+						<f:if condition="{data.SYS_LASTCHANGED}">
+							<f:then>
+								<f:translate key="last_updated" extensionName="mechkey" />: <f:format.date format="{f:translate(key: 'default_date_format', extensionName: 'mechkey')} ">{data.SYS_LASTCHANGED}</f:format.date>
+							</f:then>
+						</f:if>
+					</f:else>
+				</f:if>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-lower">
+		<div class="container">
 			<ul class="footer-nav">
 				<f:for each="{footermenu}" as="menuitem">
 					<li>

@@ -57,13 +57,19 @@
     }
 
     &:hover {
-      // background: darken($primary_dark, 3%);
+      background: darken($primary_dark, 3%);
 
       .subnav-wrap {
         // opacity: 1;
         // pointer-events: auto;
         display: block;
       }
+    }
+  }
+
+  > li {
+    > a {
+      text-decoration: none !important;
     }
   }
 }

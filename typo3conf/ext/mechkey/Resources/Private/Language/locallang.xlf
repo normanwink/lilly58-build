@@ -3,6 +3,9 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2021-03-17T13:24:51Z" product-name="mechkey">
 		<header/>
 		<body>
+			<trans-unit id="default_date_format">
+				<source>d.m.Y</source>
+			</trans-unit>
 			<trans-unit id="mechkey.home">
 				<source>Home</source>
 			</trans-unit>
@@ -14,6 +17,9 @@
 			</trans-unit>
 			<trans-unit id="mechkey.title">
 				<source>Mechkey</source>
+			</trans-unit>
+			<trans-unit id="last_updated">
+				<source>Last updated</source>
 			</trans-unit>
 		</body>
 	</file>
