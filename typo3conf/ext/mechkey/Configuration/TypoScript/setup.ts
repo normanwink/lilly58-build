@@ -98,4 +98,25 @@ tt_content {
 			}
 		}
 	}
+
+  prevnext =< lib.contentElement
+	prevnext {
+		templateName = Prevnext
+
+		dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      10 {
+        special = list
+        special.value.field = tx_mechkey_prevpage
+				as = prevpage
+      }
+
+      20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      20 {
+        special = list
+        special.value.field = tx_mechkey_nextpage
+				as = nextpage
+      }
+    }
+	}
 }

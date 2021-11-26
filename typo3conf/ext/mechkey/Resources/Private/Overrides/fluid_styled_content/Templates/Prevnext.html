@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+  <div class="container">
+    <div class="prevnext-flex">
+      <div class="column">
+        <f:if condition="{prevpage.0}">
+          <f:then>
+            <f:translate key="ce.prevnext.prev" extensionName="mechkey"/>:<br>
+            <f:link.typolink parameter="{prevpage.0.link}" class="btn">
+              {prevpage.0.title}
+            </f:link.typolink>
+          </f:then>
+        </f:if>
+      </div>
+      <div class="column">
+        <f:if condition="{nextpage.0}">
+          <f:then>
+            <f:translate key="ce.prevnext.next" extensionName="mechkey"/>:<br>
+            <f:link.typolink parameter="{nextpage.0.link}" class="btn">
+              {nextpage.0.title}
+            </f:link.typolink>
+          </f:then>
+        </f:if>
+      </div>
+    </div>
+  </div>
+
+</f:section>
+</html>

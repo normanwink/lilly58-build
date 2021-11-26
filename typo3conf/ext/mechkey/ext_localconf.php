@@ -14,9 +14,19 @@
               CType = hero
             }
           }
+
+          prevnext {
+            iconIdentifier = content-menu-related
+            title = LLL:EXT:mechkey/Resources/Private/Language/locallang_db.xlf:ce.prevnext.title
+            description = LLL:EXT:mechkey/Resources/Private/Language/locallang_db.xlf:ce.prevnext.description
+            tt_content_defValues {
+              CType = prevnext
+            }
+          }
 				}
 
       	show := addToList(hero)
+				show := addToList(prevnext)
 			}
 		}
 	}'

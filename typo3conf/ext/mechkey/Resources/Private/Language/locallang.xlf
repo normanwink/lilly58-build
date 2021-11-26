@@ -3,17 +3,23 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2021-03-17T13:24:51Z" product-name="mechkey">
 		<header/>
 		<body>
-			<trans-unit id="lilly.home">
+			<trans-unit id="mechkey.home">
 				<source>Home</source>
 			</trans-unit>
-			<trans-unit id="lilly.imprint">
+			<trans-unit id="mechkey.imprint">
 				<source>Imprint</source>
 			</trans-unit>
-			<trans-unit id="lilly.privacy">
+			<trans-unit id="mechkey.privacy">
 				<source>Privacy</source>
 			</trans-unit>
-			<trans-unit id="lilly.title">
+			<trans-unit id="mechkey.title">
 				<source>Mechkey</source>
+			</trans-unit>
+			<trans-unit id="ce.prevnext.prev">
+				<source>Previous page</source>
+			</trans-unit>
+			<trans-unit id="ce.prevnext.next">
+				<source>Next page</source>
 			</trans-unit>
 		</body>
 	</file>

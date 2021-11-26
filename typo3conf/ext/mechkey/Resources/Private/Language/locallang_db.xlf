@@ -15,6 +15,18 @@
 			<trans-unit id="ce.hero.description">
 				<source>Large image with headline</source>
 			</trans-unit>
+			<trans-unit id="ce.prevnext.title">
+				<source>Prev / Next Page</source>
+			</trans-unit>
+			<trans-unit id="ce.prevnext.description">
+				<source>Select previous and next page</source>
+			</trans-unit>
+			<trans-unit id="ce.prevnext.prev">
+				<source>Previous page</source>
+			</trans-unit>
+			<trans-unit id="ce.prevnext.next">
+				<source>Next page</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
