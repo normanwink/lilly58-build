@@ -15,12 +15,6 @@
 			<trans-unit id="mechkey.title">
 				<source>Mechkey</source>
 			</trans-unit>
-			<trans-unit id="ce.prevnext.prev">
-				<source>Previous page</source>
-			</trans-unit>
-			<trans-unit id="ce.prevnext.next">
-				<source>Next page</source>
-			</trans-unit>
 		</body>
 	</file>
 </xliff>

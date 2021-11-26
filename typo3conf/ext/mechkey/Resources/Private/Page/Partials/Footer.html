@@ -3,16 +3,13 @@
 	<div class="container">
 		<div class="footer-content">
 			<ul class="footer-nav">
-				<li>
-					<f:link.typolink parameter="9">
-	          <f:translate key="mechkey.imprint" extensionName="mechkey"/>
-	        </f:link.typolink>
-				</li>
-				<li>
-					<f:link.typolink parameter="8">
-	          <f:translate key="mechkey.privacy" extensionName="mechkey"/>
-	        </f:link.typolink>
-				</li>
+				<f:for each="{footermenu}" as="menuitem">
+					<li>
+						<f:link.typolink parameter="{menuitem.link}">
+							{menuitem.title}
+						</f:link.typolink>
+					</li>
+				</f:for>
 			</ul>
 		</div>
 	</div>

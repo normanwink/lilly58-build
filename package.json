@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss-compile": "node-sass -rw typo3conf/ext/lilly58/Resources/Public/Scss -o typo3conf/ext/lilly58/Resources/Public/Css",
-    "watch": "sass typo3conf/ext/lilly58/Resources/Public/Scss/style.scss typo3conf/ext/lilly58/Resources/Public/Css/style.css --watch"
+    "watch": "sass typo3conf/ext/mechkey/Resources/Public/Scss/style.scss typo3conf/ext/mechkey/Resources/Public/Css/style.css --watch"
   },
   "repository": {
     "type": "git",

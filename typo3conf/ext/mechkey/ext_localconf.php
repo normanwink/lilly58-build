@@ -75,7 +75,7 @@
 	TCEFORM {
 		tt_content {
 			CType {
-				removeItems = header, bullets, textmedia, menu_abstract, menu_categorized_content, menu_categorized_pages, menu_subpages, menu_recently_updated, menu_related_pages, menu_section_pages, menu_sitemap_pages, menu_sitemap, menu_section, form_formframework
+				removeItems = header, bullets, textmedia, menu_abstract, menu_categorized_content, menu_categorized_pages, menu_subpages, menu_recently_updated, menu_pages, menu_related_pages, menu_section_pages, menu_sitemap_pages, menu_sitemap, menu_section, form_formframework
 			}
 
 			header_position {
@@ -123,10 +123,14 @@
 
 			layout {
 				altLabels {
-					0 = Default (H2)
+					0 = Default
 					1 = Indent Left
 					2 = Indent Right
 					3 = Indent Both
+				}
+
+				addItems {
+					4 = Wide
 				}
 			}
 

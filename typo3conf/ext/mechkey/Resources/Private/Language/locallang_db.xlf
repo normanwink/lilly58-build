@@ -27,6 +27,12 @@
 			<trans-unit id="ce.prevnext.next">
 				<source>Next page</source>
 			</trans-unit>
+			<trans-unit id="ce.prevnext.prevtext">
+				<source>Previous page text</source>
+			</trans-unit>
+			<trans-unit id="ce.prevnext.nexttest">
+				<source>Next page text</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

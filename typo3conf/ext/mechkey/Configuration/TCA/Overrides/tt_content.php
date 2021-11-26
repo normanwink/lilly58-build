@@ -44,14 +44,33 @@ $GLOBALS['TCA']['tt_content']['columns']['tx_mechkey_nextpage'] = array(
   ]
 );
 
+$GLOBALS['TCA']['tt_content']['columns']['tx_mechkey_prevtext'] = array(
+  'label' => 'LLL:EXT:mechkey/Resources/Private/Language/locallang_db.xlf:ce.prevnext.prevtext',
+  'config' => [
+    'type' => 'input',
+    'size' => 30,
+    'eval' => 'trim'
+  ]
+);
+
+$GLOBALS['TCA']['tt_content']['columns']['tx_mechkey_nexttext'] = array(
+  'label' => 'LLL:EXT:mechkey/Resources/Private/Language/locallang_db.xlf:ce.prevnext.nexttext',
+  'config' => [
+    'type' => 'input',
+    'size' => 30,
+    'eval' => 'trim'
+  ]
+);
+
 $GLOBALS['TCA']['tt_content']['palettes']['prevnext'] = array(
 	'label' => 'LLL:EXT:mechkey/Resources/Private/Language/locallang_db.xlf:ce.prevnext.title',
 	'showitem' => '
-		tx_mechkey_prevpage,
-		tx_mechkey_nextpage,
+		tx_mechkey_prevtext,tx_mechkey_prevpage,--linebreak--,
+		tx_mechkey_nexttext,tx_mechkey_nextpage,
 	'
 );
 
+// content element HERO
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
 	array(
 		'LLL:EXT:mechkey/Resources/Private/Language/locallang_db.xlf:ce.hero.title',
@@ -59,10 +78,10 @@ $GLOBALS['TCA']['tt_content']['palettes']['prevnext'] = array(
 		'EXT:core/Resources/Public/Icons/T3Icons/svgs/content/content-image.svg'
 	),
 	'CType',
-	'mechkey'
+	'hero'
 );
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['hero'] = 'content-image';
-$GLOBALS['TCA']['tt_content']['types']['prevnext'] = array(
+$GLOBALS['TCA']['tt_content']['types']['hero'] = array(
 	'showitem' => '
 		--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
 			--palette--;;general,
@@ -94,6 +113,7 @@ $GLOBALS['TCA']['tt_content']['types']['prevnext'] = array(
   ]
 );
 
+// content element PREVNEXT
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
 	array(
 		'LLL:EXT:mechkey/Resources/Private/Language/locallang_db.xlf:ce.prevnext.title',

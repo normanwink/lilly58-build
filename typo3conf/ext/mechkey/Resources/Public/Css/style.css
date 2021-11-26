@@ -16,6 +16,8 @@ html, body {
   font-size: 16px;
   font-weight: 100;
   line-height: 1.8em;
+  color: #000000;
+  background: #FEFFF2;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -26,7 +28,8 @@ h1, h2, h3 {
   font-weight: 400;
   line-height: 1.3em;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin: 0;
+  color: #01737E;
 }
 
 h1 {
@@ -105,18 +108,60 @@ a:hover {
   padding-left: 10%;
   padding-right: 10%;
 }
+.frame-layout-4 .container {
+  max-width: 1536px;
+}
 
-.bodytext *:first-child {
+.bodytext > *:first-child {
   margin-top: 0;
 }
-.bodytext *:last-child {
-  margin-top: 0;
+.bodytext > *:last-child {
+  margin-bottom: 0;
+}
+
+header span {
+  position: relative;
+  margin-bottom: 4rem;
+  display: inline-block;
+}
+header span:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 1.5rem);
+  left: 0px;
+  height: 3px;
+  width: 120%;
+  transform: translateY(-50%);
+  background: #F64203;
+}
+
+.btn,
+.bodytext strong a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  border: 1px solid #013D45;
+  color: #013D45;
+  background: rgba(1, 61, 69, 0);
+  transition: all 100ms linear;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.btn:hover,
+.bodytext strong a:hover {
+  text-decoration: none;
+  color: #FEFFF2;
+  background: #013d45;
 }
 
 .nav {
   position: fixed;
   z-index: 10;
-  background: #FAFAFA;
+  background: #152228;
+  color: #FEFFF2;
   width: 100%;
   top: 0px;
   left: 0px;
@@ -126,11 +171,9 @@ a:hover {
   position: absolute;
   top: 100%;
   left: 0px;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
   width: 100%;
-  background: #f2f2f2;
-  transition: opacity 300ms linear;
+  background: #10191e;
 }
 
 .subnav {
@@ -157,12 +200,12 @@ a:hover {
   font-weight: bold;
 }
 .mainmenu li:hover .subnav-wrap {
-  opacity: 1;
-  pointer-events: auto;
+  display: block;
 }
 
 .footer {
-  background: #FAFAFA;
+  background: #152228;
+  color: #FEFFF2;
   padding: 1em 0;
   margin-top: 8em;
 }
@@ -201,7 +244,7 @@ a:hover {
   padding: 0.5em 1em;
 }
 .frame-type-table table tr:hover {
-  background: #FAFAFA;
+  background: rgba(0, 0, 0, 0.025);
 }
 
 .hero-container {
@@ -219,18 +262,36 @@ a:hover {
 }
 
 .hero-content {
-  padding: 8em 0;
   position: relative;
   z-index: 2;
 }
-.hero-content h1 {
-  font-size: 5vw;
-  font-weight: 100;
+.hero-content .bodytext {
+  padding: 2rem;
+  background: #FEFFF2;
+  margin-top: 25vh;
+  margin-left: auto;
+  max-width: 50%;
+  transform: translateX(1rem);
+  box-sizing: border-box;
+}
+
+.frame-type-prevnext .flex {
+  justify-content: space-between;
+}
+
+.prevnext-prev .btn .fas {
+  transform: translateX(-66%);
+}
+.prevnext-next {
+  text-align: right;
+}
+.prevnext-next .btn .fas {
+  transform: translateX(66%);
 }
 
 @media (max-width: 1280px) {
-  .hero-content {
-    padding: 10vw 0;
+  .hero-content .bodytext {
+    max-width: 66%;
   }
 }
 @media (max-width: 768px) {
@@ -239,8 +300,16 @@ a:hover {
     font-size: 2em;
   }
 
-  .hero-content {
-    padding: 4em 0;
+  .hero-image {
+    position: static;
+    transform: none;
+  }
+
+  .hero-content .bodytext {
+    transform: none;
+    padding: 1em;
+    margin-top: 0;
+    max-width: 100%;
   }
 }
 

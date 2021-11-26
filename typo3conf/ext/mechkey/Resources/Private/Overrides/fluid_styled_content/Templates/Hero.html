@@ -18,14 +18,12 @@
 
     <div class="hero-content">
       <div class="container">
-        <div class="column">
-          <div class="bodytext">
-            <f:render partial="Header/All" arguments="{_all}" />
-            
-            <f:if condition="{data.bodytext}">
-              <f:format.html>{data.bodytext}</f:format.html>
-            </f:if>
-          </div>
+        <div class="bodytext">
+          <f:render partial="Header/All" arguments="{_all}" />
+
+          <f:if condition="{data.bodytext}">
+            <f:format.html>{data.bodytext}</f:format.html>
+          </f:if>
         </div>
       </div>
     </div>

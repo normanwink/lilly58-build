@@ -1,7 +1,8 @@
 .nav {
   position: fixed;
   z-index: 10;
-  background: $gray;
+  background: $primary_dark;
+  color: $tertiary;
   width: 100%;
   top: 0px;
   left: 0px;
@@ -11,11 +12,12 @@
   position: absolute;
   top: 100%;
   left: 0px;
-  opacity: 0;
-  pointer-events: none;
+  // opacity: 0;
+  // pointer-events: none;
+  // transition: opacity 300ms linear;
+  display: none;
   width: 100%;
-  background: darken($gray, 3%);
-  transition: opacity 300ms linear;
+  background: darken($primary_dark, 3%);
 }
 
 .subnav {
@@ -24,6 +26,12 @@
   padding: 0;
   display: flex;
   justify-content: flex-end;
+
+  // a {
+  //   &:hover {
+  //     text-decoration: underline;
+  //   }
+  // }
 }
 
 .mainmenu {
@@ -39,15 +47,22 @@
       display: block;
       padding: 1em;
 
+      // &:hover {
+      //   text-decoration: none;
+      // }
+
       &.active {
         font-weight: bold;
       }
     }
 
     &:hover {
+      // background: darken($primary_dark, 3%);
+
       .subnav-wrap {
-        opacity: 1;
-        pointer-events: auto;
+        // opacity: 1;
+        // pointer-events: auto;
+        display: block;
       }
     }
   }

@@ -1,0 +1,25 @@
+.frame-type-prevnext {
+  .flex {
+    justify-content: space-between;
+  }
+}
+
+.prevnext {
+  &-prev {
+    .btn {
+      .fas {
+        transform: translateX(-66%);
+      }
+    }
+  }
+
+  &-next {
+    text-align: right;
+
+    .btn {
+      .fas {
+        transform: translateX(66%);
+      }
+    }
+  }
+}

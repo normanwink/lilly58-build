@@ -32,9 +32,18 @@ page {
       10 {
         special = directory
         special.value = 1
-        levels = 6
-        includeSpacer = 1
+        levels = 3
+        includeSpacer = 0
         as = mainmenu
+      }
+
+      20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      20 {
+        special = directory
+        special.value = 6
+        levels = 1
+        includeSpacer = 0
+        as = footermenu
       }
     }
 
@@ -62,6 +71,9 @@ page {
 	}
 
 	includeCSS {
+		fa_base = {$resources}/Public/Vendor/fontawesome-free-5.15.4-web/css/fontawesome.min.css
+		fa_solid = {$resources}/Public/Vendor/fontawesome-free-5.15.4-web/css/solid.min.css
+
 		main = {$resources}/Public/Css/style.css
 		main.media = all
 	}

@@ -3,15 +3,15 @@
 
 <f:section name="Main">
   <div class="container">
-    <div class="column">
-      <f:if condition="{files.0}">
-        <f:then>
+    <div class="flex">
+      <f:for each="{files}" as="file">
+        <div class="column">
           <picture>
             <source media="(min-width: 768px)" srcset="{f:uri.image(image: '{files.0}', maxWidth: '1248')}" />
             <img src="{f:uri.image(image: '{files.0}', maxWidth: '540')}" />
           </picture>
-        </f:then>
-      </f:if>
+        </div>
+      </f:for>
     </div>
   </div>
 </f:section>

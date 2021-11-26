@@ -2,23 +2,33 @@
 <f:layout name="Default" />
 <f:section name="Main">
   <div class="container">
-    <div class="prevnext-flex">
-      <div class="column">
+    <div class="flex">
+      <div class="column prevnext-prev">
         <f:if condition="{prevpage.0}">
           <f:then>
-            <f:translate key="ce.prevnext.prev" extensionName="mechkey"/>:<br>
+            <f:if condition="{data.tx_mechkey_prevtext}">
+              <f:then>
+                <f:format.html>{data.tx_mechkey_prevtext}</f:format.html>
+              </f:then>
+            </f:if>
+
             <f:link.typolink parameter="{prevpage.0.link}" class="btn">
-              {prevpage.0.title}
+              <i class="fas fa-angle-left"></i> {prevpage.0.title}
             </f:link.typolink>
           </f:then>
         </f:if>
       </div>
-      <div class="column">
+      <div class="column prevnext-next">
         <f:if condition="{nextpage.0}">
           <f:then>
-            <f:translate key="ce.prevnext.next" extensionName="mechkey"/>:<br>
+            <f:if condition="{data.tx_mechkey_nexttext}">
+              <f:then>
+                <f:format.html>{data.tx_mechkey_nexttext}</f:format.html>
+              </f:then>
+            </f:if>
+
             <f:link.typolink parameter="{nextpage.0.link}" class="btn">
-              {nextpage.0.title}
+              {nextpage.0.title} <i class="fas fa-angle-right"></i>
             </f:link.typolink>
           </f:then>
         </f:if>

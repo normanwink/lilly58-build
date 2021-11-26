@@ -1,0 +1,21 @@
+.btn,
+.bodytext strong a {
+  display: inline-block;
+  padding: .5em 1em;
+  border-radius: 3px;
+  border: 1px solid $primary;
+  color: $primary;
+  background: rgba($primary, 0);
+  transition: all 100ms linear;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &:hover {
+    text-decoration: none;
+    color: $tertiary;
+    background: rgba($primary, 1);
+  }
+}

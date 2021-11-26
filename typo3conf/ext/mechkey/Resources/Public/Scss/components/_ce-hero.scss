@@ -13,24 +13,40 @@
 }
 
 .hero-content {
-  padding: $margin_l 0;
   position: relative;
   z-index: 2;
 
-  h1 {
-    font-size: 5vw;
-    font-weight: $light;
+  .bodytext {
+    padding: 2rem;
+    background: $tertiary;
+    margin-top: 25vh;
+    margin-left: auto;
+    max-width: 50%;
+    transform: translateX(1rem);
+    box-sizing: border-box;
   }
 }
 
 @mixin hero-desktop {
   .hero-content {
-    padding: 10vw 0;
+    .bodytext {
+      max-width: 66%;
+    }
   }
 }
 
 @mixin hero-tablet {
+  .hero-image {
+    position: static;
+    transform: none;
+  }
+
   .hero-content {
-    padding: $margin_s 0;
+    .bodytext {
+      transform: none;
+      padding: 1em;
+      margin-top: 0;
+      max-width: 100%;
+    }
   }
 }
